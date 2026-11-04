@@ -26,7 +26,7 @@ public class Test1 {
         ChatRequest requete = ChatRequest.builder()
                 .temperature(0.7) // juste pour cette requête
                 .messages(
-                        UserMessage.from("Quelle heure est-il actuellement ?"))
+                        UserMessage.from("Comment s’appelle le chat de Pierre ?"))
                 .build();
 
         ChatResponse reponse = modele.chat(requete);

@@ -9,6 +9,7 @@
     <logger name="dev.langchain4j" level="INFO"/>
     <logger name="org.apache.fontbox" level="WARN"/>
 
+
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>
     </root>
