@@ -26,7 +26,7 @@ public class Test2Couts{
         ChatRequest requete = ChatRequest.builder()
                 .temperature(0.7) // juste pour cette requête
                 .messages(
-                        UserMessage.from("Quelle heure est-il actuellement ?"))
+                        UserMessage.from("Je dois partir dans 2 jours à Paris ; j’y resterai 3 jours. Est-ce que je dois mettre un parapluie dans mes valises ?"))
                 .build();
 
         ChatResponse reponse = modele.chat(requete);
