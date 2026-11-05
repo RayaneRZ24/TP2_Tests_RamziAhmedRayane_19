@@ -25,6 +25,15 @@ public class Test3Traducteur {
                 .timeout(Duration.ofSeconds(60)) // si service surchargé
                 .responseFormat(ResponseFormat.JSON) // juste pour voir
                 .build();
+        PromptTemplate templateAnglais = PromptTemplate.from(
+                "Traduis le texte suivant en anglais : {{texte}}");
+
+        Prompt promptAnglais = templateAnglais.apply(Map.of(
+                "texte", "Bonjour, je suis étudiant en informatique."));
+
+        String reponseAnglais = modele.chat(promptAnglais.text());
+        System.out.println(reponseAnglais);
+
         PromptTemplate template = PromptTemplate.from(
                 "Traduis le texte suivant en {{langue}} : {{texte}}");
 
